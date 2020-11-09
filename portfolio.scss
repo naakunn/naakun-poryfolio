@@ -1,0 +1,495 @@
+@charset "UTF-8";
+
+// 関数定義
+$ff: 'Georgia',
+'Lato',
+'Arial',
+YuGothic,
+'Yu Gothic',
+'Hiragino Kaku Gothic ProN',
+'ヒラギノ角ゴ ProN W3',
+'メイリオ',
+Meiryo,
+'ＭＳ ゴシック',
+sans-serif;
+$hc: #111;
+$fcb: #000;
+$fcw: #fff;
+$bgc: #333c5e;
+$aboutBorder: #91C6D7;
+
+/*フォントサイズ指定*/
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*フォントファミリー指定*/
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a {
+  font-family: $ff;
+  letter-spacing: 2px;
+}
+
+// ふっわと出でくる処理
+.fadeInDown {
+  -webkit-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  visibility: visible !important;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+// ロード画面
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 5;
+
+  #loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 100px;
+    width: 100%;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    text-align: center;
+    color: #fff;
+    z-index: 4;
+
+    .loader-text {
+      color: $fcw;
+      letter-spacing: 10px;
+    }
+  }
+}
+
+// ヘッダー
+header {
+  width: 100%;
+  height: 70px;
+  background-color: $hc;
+  opacity: 0.9;
+  color: $fcw;
+  display: flex;
+  position: fixed;
+  z-index: 3;
+
+  .header-name {
+    padding: 20px;
+    margin-left: 50px;
+  }
+}
+
+.header-lists {
+  margin-left: 20px;
+  position: relative;
+
+  .header-list {
+    display: flex;
+    margin-left: 20px;
+    position: absolute;
+    right: -1100px;
+  }
+
+  .page-link {
+    color: $fcw;
+    display: inline-block;
+    transition: .3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+
+    &:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      color: #FF773E;
+    }
+
+    .page-list {
+      padding: 25px;
+    }
+  }
+}
+
+
+// メイン
+main {
+  .top {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/top-img3.jpg);
+    background-size: cover;
+
+    .top-title {
+      text-align: center;
+      padding-top: 300px;
+      color: $fcb;
+      display: none;
+    }
+  }
+}
+
+// アバウト
+.about {
+  padding-top: 70px;
+  margin-bottom: 100px;
+  width: 100%;
+  height: auto;
+
+  .wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .about-title {
+      text-align: center;
+    }
+
+    .about-box {
+      text-align: center;
+      display: flex;
+      justify-self: space-around;
+      margin-top: 100px;
+
+      .box-left {
+        width: 40%;
+
+        .about-img {
+          width: 100%;
+        }
+      }
+
+      .box-right {
+        width: 40%;
+        margin: 0 auto;
+        text-align: left;
+
+        .profile-box {
+          margin-bottom: 30px;
+
+          .profile-title {
+            border-bottom: 2px solid $aboutBorder;
+            margin-bottom: 30px;
+          }
+
+          .profile-text {
+            margin-bottom: 10px;
+          }
+        }
+
+        .skill-box {
+          padding-top: 30px;
+
+          .skill-title {
+            border-bottom: 2px solid $aboutBorder;
+          }
+
+          .skill-img-boxs {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+
+            .skill-img-box {
+              .skill-img {
+                width: 100%;
+                margin-right: 5px;
+                margin-left: -20px;
+              }
+
+              .skill-imgs {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// プロダクト
+.product {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 70px;
+  background-color: #F8F9FA;
+
+  .wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .product-title-box {
+      .product-title {
+        margin-bottom: 50px;
+      }
+    }
+
+    .product-content-boxs {
+      padding-top: 100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .box-content {
+        width: 40%;
+        margin-bottom: 50px;
+
+        .img-box-content {
+          margin: 0 auto;
+          width: 70%;
+
+          #product-img-1, #product-img-2, #product-img-3, #product-img-4 {
+            width: 100%;
+            height: 300px;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+
+        .title-box-content {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+#pop-box-1 {
+  display: none;
+  .pop-img1 {
+    #imgs {
+      width: 30%;
+    }
+  }
+}
+
+// サービス
+.services {
+  width: 100%;
+  height: auto;
+  padding-top: 70px;
+
+  .wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .services-title-box {
+      text-align: center;
+
+      .services-title {
+        margin-bottom: 50px;
+      }
+
+      .services-text {
+        margin-bottom: 100px;
+      }
+    }
+
+    .services-box {
+      display: flex;
+      margin: 0 auto;
+      padding-bottom: 100px;
+
+      .services-boxs {
+        width: 30%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px;
+        border-top: solid 5px #5d627b;
+        box-shadow: 0px 3px 5px grey;
+
+        .services-box-text {
+          margin: 0 auto;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+// コンタクト
+.contact {
+  width: 100%;
+  height: auto;
+  background-color: #F8F9FA;
+  padding-top: 70px;
+
+  .wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .contact-title-box {
+      text-align: center;
+
+      .contact-title {
+        margin-bottom: 50px;
+      }
+
+      .contact-text {
+        margin-bottom: 50px;
+      }
+    }
+
+    .contact-form {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+
+      .forms {
+        padding-bottom: 50px;
+
+        .input-field {
+          width: 600px;
+          margin-bottom: 10px;
+        }
+
+        .send-btn {
+          margin-top: 30px;
+
+          .btn {
+            width: 150px;
+            height: 40px;
+            background-color: #91C6D7;
+            color: $fcw;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border-radius: 15px;
+            border: 0px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 3px solid black;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+
+            &:active {
+              -webkit-transform: translate(0, 2px);
+              -moz-transform: translate(0, 2px);
+              transform: translate(0, 2px);
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // トップページへ移動
+  .top-page {
+    padding: 80px 0;
+
+    .wrapper {
+      transition: .3s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+
+      .go-top {
+        display: flex;
+        float: right;
+        color: $fcb;
+
+        &:hover {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+          color: #FF773E;
+        }
+
+        .fa-angle-double-up {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+// フッター
+footer {
+  background-color: #111;
+  width: 100%;
+  height: 80px;
+
+  .footer-box {
+    text-align: center;
+
+    .footer-text {
+      color: #fff;
+      padding-top: 35px;
+    }
+  }
+}

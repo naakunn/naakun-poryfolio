@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="resset.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="portfolio.css">
+  <!-- SCSS -->
+  <link rel="stylesheet" href="portfolio.scss">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+    integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+  <!-- GoogleFont -->
+  <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <title>NaokiSatake Portfolio</title>
+</head>
+
+<body>
+  <div id="loader-bg">
+    <div id="loader">
+      <h1 class="loader-text">Welcom to my portfolio</h1>
+    </div>
+  </div>
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-name">
+      <h3 class="header-name-title">Naoki Satake</h3>
+    </div>
+    <div class="header-lists">
+      <ul class="header-list">
+        <a class="page-link" href="#1">
+          <li class="page-list">About</li>
+        </a>
+        <a class="page-link" href="#2">
+          <li class="page-list">Product</li>
+        </a>
+        <a class="page-link" href="#3">
+          <li class="page-list">Services</li>
+        </a>
+        <a class="page-link" href="#4">
+          <li class="page-list">Contact</li>
+        </a>
+      </ul>
+    </div>
+  </header>
+  <!-- メイン -->
+  <main id="5">
+    <!-- トップ -->
+    <div class="top" id="js-top">
+    </div>
+    <!-- アバウト -->
+    <div class="about" id="1">
+      <div class="wrapper" id="about">
+        <h2 class="about-title titles" id="about-title">About</h2>
+        <div class="about-box">
+          <!-- アイコン写真挿入 -->
+          <div class="box-left">
+            <img class="about-img" src="img/portfolioicon.jpg" alt="アイコン">
+          </div>
+          <!-- アバウト右側 -->
+          <div class="box-right">
+            <div class="profile-box">
+              <h3 class="profile-title">Profile</h3>
+              <p class="profile-text">佐武直輝</p>
+              <p class="profile-text">20歳（2000年生まれ）</p>
+              <p class="profile-text">福井県出身</p>
+              <p class="profile-text">
+                プログラミングを独学で勉強しております、目標は人の役に立つサービスを作成することです。
+                この先エンジニアとして、そして人として人から信頼される人間を目指しております、その為に知識や技術面に関してはもちろんですが人とのコミュニケーションも大事にしていきます。
+              </p>
+            </div>
+            <!-- スキルボックス -->
+            <div class="skill-box">
+              <h3 class="skill-title">Skill</h3>
+              <div class="skill-img-boxs">
+                <div class="skill-img-box">
+                  <img class="skill-img" src="img/htmllogo.png" alt="HTMLロゴ">
+                </div>
+                <div class="skill-img-box">
+                  <img class="skill-img" src="img/csslogo.png" alt="CSSロゴ">
+                </div>
+                <div class="skill-img-box">
+                  <img class="skill-img" src="img/jslogo.png" alt="JavaScriptロゴ">
+                </div>
+                <div class="skill-img-box">
+                  <img class="skill-imgs" src="img/scsslogo.png" alt="SCSSロゴ">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- プロダクト -->
+    <div class="product" id="2">
+      <div class="wrapper" id="product">
+        <div class="product-title-box">
+          <h2 class="product-title titles">Product</h2>
+          <p class="product-text">私が作成しましたイラストレーターの友人のホームページです。<br>画像をクリックすることでページに移動できます。</p>
+        </div>
+        <!-- ホーズページサイト画像 -->
+        <div class="product-content-boxs">
+          <!-- 　画像挿入 -->
+          <div class="box-content">
+            <div class="img-box-content">
+              <a href="rokkey/folder/HOME/rokky.home.html">
+                <img id="product-img-1" src="img/rokkey:home.png" alt="Home">
+              </a>
+            </div>
+            <div class="title-box-content">
+              <h4 class="product-box-title">１ページ目</h4>
+            </div>
+          </div>
+          <!-- 　画像挿入 -->
+          <div class="box-content">
+            <div class="img-box-content">
+              <a href="rokkey/folder/profile/rokkey.pro.html">
+                <img id="product-img-2" src="img/rokkey:profile.png" alt="Profile">
+              </a>
+            </div>
+            <div class="title-box-content">
+              <h4 class="product-box-title">2ページ目</h4>
+            </div>
+          </div>
+          <!-- 　画像挿入 -->
+          <div class="box-content">
+            <div class="img-box-content">
+              <a href="rokkey/folder/illastration/rokkey.il.html">
+                <img id="product-img-3" src="img/rokkey:illustlation.png" alt="illustlation">
+              </a>
+            </div>
+            <div class="title-box-content">
+              <h4 class="product-box-title">3ページ目</h4>
+            </div>
+          </div>
+          <!-- 　画像挿入 -->
+          <div class="box-content">
+            <div class="img-box-content">
+              <a href="rokkey/folder/contact/rokkey.co.html">
+                <img id="product-img-4" src="img/rokkey:contact.png" alt="Contact">
+              </a>
+            </div>
+            <div class="title-box-content">
+              <h4 class="product-box-title">4ページ目</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- サービス -->
+    <div class="services" id="3">
+      <div class="wrapper" id="services">
+        <!-- サービスタイトルボックス -->
+        <div class="services-title-box">
+          <h2 class="services-title titles">Services</h2>
+          <p class="services-text">私が提供できるサービスになります。<br>随時スキルアップを行い、提供できるサービスの幅を広げていきます。</p>
+        </div>
+        <!-- サービスボックス -->
+        <div class="services-box">
+          <!-- サービスボックスコンテンツ -->
+          <div class="services-boxs">
+            <img class="services-box-img" src="img/weblogo.png" alt="Web製作ロゴ" width="250px" height="250px">
+            <h4 class="services-box-title">Web製作</h4>
+            <p class="services-box-text">ライディングページやコーポレートサイト、Webサイトのデザインカンプを元に適切にコーディングを行います。</p>
+          </div>
+          <!-- サービスボックスコンテンツ -->
+          <div class="services-boxs">
+            <img class="services-box-img" src="img/responisblogo.png" alt="レスポンシブ対応ロゴ" width="250px" height="250px">
+            <h4 class="services-box-title">レスポンシブ対応</h4>
+            <p class="services-box-text">レスポンシブ対応することでタブレット端末やスマートフォンで閲覧しても見やすいWebサイトを製作することができます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- コンタクト -->
+    <div class="contact" id="4">
+      <div class="wrapper" id="contact">
+        <div class="contact-title-box">
+          <h2 class="contact-title titles">Contact</h2>
+          <p class="contact-text">お問い合わせは<span class="font-borld">こちらのフォーム</span>で受け付けております。<br>お仕事のご依頼、ご相談お待ちしております。
+          </p>
+        </div>
+        <!-- コンタクトフォーム -->
+        <div class="contact-form">
+          <form class="forms" action="">
+            <div>
+              <input class="input-field" type="text" placeholder="例）お名前">
+            </div>
+            <div>
+              <input class="input-field" type="email" placeholder="例）guest@example.mail">
+            </div>
+            <div>
+              <textarea class="input-field" name="" id="" cols="10" rows="5" placeholder="お問い合わせ内容を入力"></textarea>
+            </div>
+            <div class="send-btn">
+              <button class="btn">送信する</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- トップページ -->
+      <div class="top-page">
+        <div class="wrapper">
+          <a class="go-top" href="#5">
+            <i class="fas fa-angle-double-up"></i>
+            <p>PAGE TOP</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- フッター -->
+  <footer>
+    <div class="footer-box">
+      <p class="footer-text">©️NaokiSatake.com 2020</p>
+    </div>
+  </footer>
+
+
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- javascript -->
+  <script src="portfolio.js"></script>
+</body>
+
+</html>
